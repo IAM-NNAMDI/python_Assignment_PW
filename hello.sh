@@ -1,19 +1,16 @@
 #!/bin/bash
 
-# This script says hello and checks your age
+# This script uses environment variables (good for Jenkins)
+
+echo "Hello! 👋"
+
+# Use environment variables, or defaults if not set
 NAME=${NAME:-"Student"}
 AGE=${AGE:-10}
 
-echo "Hello! 👋"
-echo "What is your name?"
-read NAME
-
 echo "Nice to meet you, $NAME!"
 
-echo "How old are you?"
-read AGE
-
-if [ $AGE -ge 10 ]; then
+if [ "$AGE" -ge 10 ]; then
     echo "You are $AGE years old. You are doing great! 🌟"
 else
     echo "You are $AGE years old. You are still very young and awesome! 🚀"
