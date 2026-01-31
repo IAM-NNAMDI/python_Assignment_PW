@@ -1,6 +1,8 @@
 #!/bin/bash
 
 # This script says hello and checks your age
+NAME=${NAME:-"Student"}
+AGE=${AGE:-10}
 
 echo "Hello! 👋"
 echo "What is your name?"
