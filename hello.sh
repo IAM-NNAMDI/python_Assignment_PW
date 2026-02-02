@@ -5,8 +5,8 @@
 echo "Hello! 👋"
 
 # Use environment variables, or defaults if not set
-NAME=${NAME:-"Nnamdi"}
-AGE=${AGE:-20}
+NAME=${NAME:-"Onyi"}
+AGE=${AGE:-13}
 
 echo "Nice to meet you, $NAME!"
 
