@@ -17,7 +17,7 @@ pipeline {
 		stage('Run Enviroment variable') {
             steps {
                 sh "echo The build number: $BUILD_ID"
-				sh "echo My custom variable is $Name"
+				sh "echo My custom variable is $NAME"
             }
         }
 	  
