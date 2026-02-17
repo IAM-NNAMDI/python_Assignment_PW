@@ -1,25 +1,27 @@
 pipeline {
     agent any
-	environment {
+    
+    environment {
         NAME = "Nnamdi"
     }
+    
     stages {
-        stage('Run linux commands') {
+        stage('Run Linux Commands') {
             steps {
-                sh """
+                sh '''
                 date
                 cal
-                #pwd
-                #whoami
-				"""
+                '''
             }
         }
-		stage('Run Enviroment variable') {
+        
+        stage('Run Environment Variable') {
             steps {
-                sh "echo The build number: $BUILD_ID"
-				sh "echo My custom variable is $NAME"
+                sh '''
+                echo The build number: $BUILD_ID
+                echo My custom variable is $NAME
+                '''
             }
         }
-	  
     }
 }
