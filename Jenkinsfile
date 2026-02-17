@@ -9,6 +9,7 @@ pipeline {
                 cal
                 pwd
                 whoami
+				"""
             }
         }
 	  
