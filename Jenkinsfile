@@ -1,6 +1,6 @@
 pipeline {
     agent any
-	Enviroment {
+	enviroment {
                 Name = "Nnamdi"
             }
     stages {
