@@ -2,19 +2,21 @@ pipeline {
     agent any
     
     environment {
-        NAME = "Nnamdi"
+        NAME = "Nnamdi" # This is pipeline level variable
     }
-    
     stages {
         stage('Run Linux Commands') {
+             environment {
+              PROJECT = "JENKINS" # This is stage level variable
+            }  
             steps {
                 sh '''
                 date
                 cal
+                echo My stage variable is $PROJECT 
                 '''
             }
         }
-        
         stage('Run Environment Variable') {
             steps {
                 sh '''
