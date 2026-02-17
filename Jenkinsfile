@@ -1,6 +1,8 @@
 pipeline {
     agent any
-
+	Enviroment {
+                Name = "Nnamdi"
+            }
     stages {
         stage('Run linux commands') {
             steps {
@@ -14,7 +16,8 @@ pipeline {
         }
 		stage('Run Enviroment variable') {
             steps {
-                sh "echo $BUILD_ID"
+                sh "echo The build number: $BUILD_ID"
+				sh "echo My custom variable is $Name"
             }
         }
 	  
