@@ -7,9 +7,14 @@ pipeline {
                 sh """
                 date
                 cal
-                pwd
-                whoami
+                #pwd
+                #whoami
 				"""
+            }
+        }
+		stage('Run Enviroment variable') {
+            steps {
+                sh "echo $BUILD_ID"
             }
         }
 	  
