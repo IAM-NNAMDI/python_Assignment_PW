@@ -1,7 +1,7 @@
 pipeline {
     agent any
-	enviroment {
-            NAME="Nnamdi"
+	environment {
+            Name = "Nnamdi"
             }
     stages {
         stage('Run linux commands') {
