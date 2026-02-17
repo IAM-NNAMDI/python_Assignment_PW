@@ -1,5 +1,7 @@
 pipeline {
     agent any
+     parameters {
+        string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
     
     environment {
         NAME = "Nnamdi" //This is pipeline level variable
@@ -13,7 +15,7 @@ pipeline {
                 sh '''
                 date
                 cal
-                echo My stage variable is $PROJECT 
+                echo "My stage variable name is $PERSON" 
                 '''
             }
         }
